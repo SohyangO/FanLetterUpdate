@@ -1,11 +1,10 @@
-import { createStore } from "redux";
-import { combineReducers } from "redux";
 import letterCollect from "./LetterReducer";
+import { configureStore } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducers({
-  letterCollect,
+const store = configureStore({
+  reducer: {
+    letterCollect: letterCollect,
+  },
 });
-
-const store = createStore(rootReducer);
 
 export default store;

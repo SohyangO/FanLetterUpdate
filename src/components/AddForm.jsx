@@ -17,6 +17,7 @@ function Form({ members }) {
   const filteredLetter = members
     ? letterAdd.filter((letter) => letter.writedTo === members)
     : letterAdd;
+  console.log(filteredLetter);
 
   const inputNickname = (e) => {
     setNickname(e.target.value);

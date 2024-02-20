@@ -39,7 +39,13 @@ const Detail = () => {
     const confirmSave = window.confirm("정말 수정하시겠습니까?");
     SetEdited(false);
     if (confirmSave) {
-      dispatch(updateLetter(letter.id, editedContent));
+      console.log(editedContent);
+      dispatch(
+        updateLetter({
+          id: letter.id,
+          content: editedContent,
+        })
+      );
       alert("수정이 완료되었습니다.");
       navigate("/");
     }
