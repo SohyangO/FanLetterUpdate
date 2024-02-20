@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "../components/StyledHome";
 import { useState } from "react";
 import AddForm from "components/AddForm";
+import Header from "./Header";
 
 function Home() {
   const [clickedMember, setClickedMember] = useState("");
@@ -13,6 +14,7 @@ function Home() {
 
   return (
     <>
+      <Header />
       <S.MainBox id="MainBox">
         <S.Header>
           <S.Title>NewJeans Fanletter Collection</S.Title>
